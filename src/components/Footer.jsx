@@ -7,27 +7,43 @@ export default function Footer() {
     <footer className="footer">
       <div className="container footer-inner">
         <p className="footer-text">
-          © {currentYear} Lumina. Crafted with passion.
+          © {currentYear} Twin Burger | หมั่นโถวเบอร์เกอร์ แป้งหมั่นโถวสูตรคุณแม่
         </p>
         <div className="footer-links">
-          <Link to="/about" className="footer-link">About</Link>
-          <Link to="/work" className="footer-link">Work</Link>
-          <Link to="/contact" className="footer-link">Contact</Link>
+          <Link to="/about" className="footer-link">เกี่ยวกับเรา</Link>
+          <Link to="/menu" className="footer-link">เมนู</Link>
+          <Link to="/contact" className="footer-link">ติดต่อ</Link>
           <a 
-            href="https://twitter.com" 
+            href="https://www.facebook.com/twinburger.bkk/" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="footer-link"
           >
-            Twitter
+            Facebook
           </a>
           <a 
-            href="https://linkedin.com" 
+            href="https://www.instagram.com/twinburger.bkk" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="footer-link"
           >
-            LinkedIn
+            Instagram
+          </a>
+          <a 
+            href="https://www.tiktok.com/@twinburger.bkk" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="footer-link"
+          >
+            TikTok
+          </a>
+          <a 
+            href="https://linktr.ee/twinburger" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="footer-link"
+          >
+            LINE
           </a>
         </div>
       </div>

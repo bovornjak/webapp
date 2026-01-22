@@ -16,7 +16,11 @@ export default function Header() {
     <header className={`header ${scrolled ? 'scrolled' : ''}`}>
       <div className="container header-inner">
         <Link to="/" className="logo">
-          Lumina<span>.</span>
+          <img 
+            src="/logo.png" 
+            alt="Twin Burger - หมั่นโถวเบอร์เกอร์ แป้งหมั่นโถวสูตรคุณแม่" 
+            className="logo-image"
+          />
         </Link>
         <nav className="nav">
           <NavLink 
@@ -24,25 +28,25 @@ export default function Header() {
             className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
             end
           >
-            Home
+            หน้าแรก
           </NavLink>
           <NavLink 
             to="/about" 
             className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
           >
-            About
+            เกี่ยวกับเรา
           </NavLink>
           <NavLink 
-            to="/work" 
+            to="/menu" 
             className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
           >
-            Work
+            เมนู
           </NavLink>
           <NavLink 
             to="/contact" 
             className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
           >
-            Contact
+            ติดต่อสั่งซื้อ
           </NavLink>
         </nav>
       </div>

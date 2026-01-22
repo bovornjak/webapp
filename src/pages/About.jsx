@@ -1,31 +1,35 @@
 export default function About() {
   const stats = [
-    { number: '8+', label: 'Years Experience' },
-    { number: '150+', label: 'Projects Completed' },
-    { number: '40+', label: 'Happy Clients' },
-    { number: '12', label: 'Team Members' }
+    { number: '1000+', label: 'ออเดอร์ต่อเดือน' },
+    { number: '50+', label: 'งานจัดเลี้ยง' },
+    { number: '100+', label: 'Food Support' },
+    { number: '5★', label: 'รีวิวเฉลี่ย' }
   ]
 
   const values = [
     {
-      icon: '◈',
-      title: 'Craft Excellence',
-      description: 'We obsess over every detail, ensuring each pixel and interaction meets the highest standards.'
+      icon: '🥡',
+      title: 'Fresh Ingredients',
+      titleThai: 'วัตถุดิบสดใหม่',
+      description: 'เราใช้วัตถุดิบคุณภาพดี สดใหม่ทุกวัน เพื่อความอร่อยที่ดีที่สุด'
     },
     {
-      icon: '✦',
-      title: 'Strategic Thinking',
-      description: 'Beautiful design must serve a purpose. We align creativity with your business objectives.'
+      icon: '👨‍🍳',
+      title: 'Homemade Recipe',
+      titleThai: 'สูตรคุณแม่',
+      description: 'แป้งหมั่นโถวสูตรคุณแม่ ทำสดใหม่ทุกวัน นุ่มหอมไม่เหมือนใคร'
     },
     {
-      icon: '◎',
-      title: 'Collaborative Spirit',
-      description: 'The best work emerges from true partnership. We work with you, not just for you.'
+      icon: '🚀',
+      title: 'Fast Delivery',
+      titleThai: 'ส่งตรงเวลา',
+      description: 'บริการจัดส่งตรงเวลา ถึงที่หมายตามนัด ไม่ต้องรอนาน'
     },
     {
-      icon: '◇',
-      title: 'Continuous Evolution',
-      description: 'We stay ahead of trends while grounding our work in timeless design principles.'
+      icon: '💯',
+      title: 'Best Value',
+      titleThai: 'คุ้มค่าทุกบาท',
+      description: 'ราคาเป็นมิตร อิ่มอร่อยคุ้มค่า เหมาะกับทุกงบประมาณ'
     }
   ]
 
@@ -37,24 +41,20 @@ export default function About() {
           <div className="about-grid">
             <div className="about-image"></div>
             <div className="about-content">
-              <h1>
-                A studio built on <em>passion</em> and purpose
-              </h1>
+              <h1>Twin Burger</h1>
+              <p className="title-thai">หมั่นโถวเบอร์เกอร์ แป้งหมั่นโถวสูตรคุณแม่</p>
               <p>
-                Founded in 2018, Lumina emerged from a simple belief: that great 
-                design has the power to transform businesses and create meaningful 
-                connections with audiences.
+                Twin Burger เกิดจากความรักในการทำอาหารและความต้องการที่จะสร้างสรรค์ 
+                เมนูใหม่ๆ ที่แตกต่าง จึงนำ <strong style={{color: 'var(--color-primary)'}}>หมั่นโถวสูตรคุณแม่</strong> 
+                มาเป็นขนมปังเบอร์เกอร์ ได้รสชาตินุ่มนวลแบบใหม่ที่ไม่เหมือนใคร!
               </p>
               <p>
-                We're a collective of strategists, designers, and developers who 
-                thrive on solving complex challenges through creative thinking. 
-                Our approach blends artistic vision with data-driven insights to 
-                deliver work that's both beautiful and effective.
+                เราเริ่มต้นจากครัวเล็กๆ ด้วยใจรักและความตั้งใจ วันนี้เราพร้อมให้บริการ
+                ทั้ง Snack Box, Meal Box, Catering และ Food Support สำหรับงานศิลปิน 
+                กองถ่าย และอีเวนต์ต่างๆ
               </p>
               <p>
-                Every project is an opportunity to push boundaries and exceed 
-                expectations. We don't just create—we craft experiences that 
-                leave lasting impressions.
+                ✨ <strong style={{color: 'var(--color-primary)'}}>แป้งหมั่นโถวสูตรคุณแม่</strong> ที่คุณต้องลอง!
               </p>
             </div>
           </div>
@@ -75,18 +75,16 @@ export default function About() {
       <section className="section">
         <div className="container">
           <div className="section-header">
-            <p className="section-eyebrow">Our Values</p>
-            <h2 className="section-title">What drives us forward</h2>
-            <p className="section-description">
-              The principles that guide every decision we make and 
-              every piece of work we deliver.
-            </p>
+            <p className="section-eyebrow">ทำไมต้องเลือกเรา</p>
+            <h2 className="section-title">Why Twin Burger?</h2>
+            <p className="section-title-thai">ทำไมต้อง Twin Burger</p>
           </div>
           <div className="cards-grid">
             {values.map((value, index) => (
               <div key={index} className="card">
                 <div className="card-icon">{value.icon}</div>
                 <h3 className="card-title">{value.title}</h3>
+                <p className="card-title-thai">{value.titleThai}</p>
                 <p className="card-description">{value.description}</p>
               </div>
             ))}
@@ -94,33 +92,27 @@ export default function About() {
         </div>
       </section>
 
-      {/* Team Section */}
+      {/* Food Support Section */}
       <section className="section">
         <div className="container">
-          <div className="section-header">
-            <p className="section-eyebrow">The Team</p>
-            <h2 className="section-title">Meet the people behind the magic</h2>
-            <p className="section-description">
-              A diverse team of creatives, strategists, and technologists 
-              united by a shared passion for exceptional work.
-            </p>
-          </div>
           <div 
+            className="card"
             style={{ 
               textAlign: 'center', 
               padding: 'var(--space-2xl)',
-              color: 'var(--color-text-muted)'
             }}
           >
-            <p style={{ fontSize: '4rem', marginBottom: 'var(--space-md)' }}>✦</p>
-            <p>We're always looking for talented individuals to join our team.</p>
-            <a 
-              href="mailto:careers@lumina.studio" 
-              className="btn btn-outline"
-              style={{ marginTop: 'var(--space-md)', display: 'inline-flex' }}
-            >
-              View Open Positions
-            </a>
+            <p style={{ fontSize: '3rem', marginBottom: 'var(--space-md)' }}>🎤</p>
+            <h3 className="section-title" style={{ fontSize: '1.75rem' }}>
+              Food Support
+            </h3>
+            <p className="section-title-thai">ฟู้ดซัพพอร์ตศิลปิน</p>
+            <p className="card-description" style={{ maxWidth: '600px', margin: '0 auto', marginTop: 'var(--space-md)' }}>
+              รับจัดอาหารสนับสนุนศิลปิน กองถ่าย คอนเสิร์ต แฟนมีตติ้ง 
+              และอีเวนต์พิเศษต่างๆ พร้อมจัดเป็นเซ็ตสวยงาม ถ่ายรูปลงโซเชียลได้เลย!
+              <br /><br />
+              ✨ รับทำป้ายชื่อศิลปิน • จัดเซ็ตถ่ายรูป • ห่อของขวัญพิเศษ
+            </p>
           </div>
         </div>
       </section>

@@ -1,15 +1,23 @@
-# Lumina - Creative Digital Studio
+# Savory & Co. - Premium Catering Website
 
-A beautiful, modern static website built with React and Vite.
+A beautiful, elegant catering business website built with React and Vite.
 
 ## Features
 
 - ⚡ **Vite** - Lightning fast build tool
 - ⚛️ **React 18** - Modern React with hooks
 - 🧭 **React Router** - Client-side routing
-- 🎨 **Custom CSS** - No frameworks, pure CSS with CSS variables
+- 🎨 **Custom CSS** - Elegant design with CSS variables
 - 📱 **Responsive** - Mobile-first design
 - ✨ **Animations** - Smooth transitions and hover effects
+- ☁️ **Cloudflare Ready** - Wrangler CLI configured for deployment
+
+## Pages
+
+- **Home** - Hero, services, featured menu, testimonials
+- **About** - Company story, team, values
+- **Menu** - Catering packages and pricing
+- **Contact** - Quote request form with event details
 
 ## Getting Started
 
@@ -40,7 +48,15 @@ npm run build
 npm run preview
 ```
 
-The build output will be in the `dist` folder, ready for deployment.
+### Deploy to Cloudflare Pages
+
+```bash
+# Login to Cloudflare (first time only)
+npx wrangler login
+
+# Deploy
+npm run deploy
+```
 
 ## Project Structure
 
@@ -56,7 +72,7 @@ webapp/
 │   ├── pages/
 │   │   ├── Home.jsx
 │   │   ├── About.jsx
-│   │   ├── Work.jsx
+│   │   ├── Menu.jsx
 │   │   └── Contact.jsx
 │   ├── styles/
 │   │   └── index.css
@@ -68,15 +84,6 @@ webapp/
 └── README.md
 ```
 
-## Deployment
-
-The built site can be deployed to any static hosting service:
-
-- **Vercel**: `vercel`
-- **Netlify**: `netlify deploy`
-- **GitHub Pages**: Push the `dist` folder
-- **AWS S3**: Upload `dist` contents
-
 ## Customization
 
 ### Colors
@@ -85,15 +92,18 @@ Edit the CSS variables in `src/styles/index.css`:
 
 ```css
 :root {
-  --color-primary: #FF6B35;
-  --color-accent: #F7C59F;
+  --color-primary: #C9A962;      /* Gold accent */
+  --color-warm: #A67C52;         /* Warm brown */
+  --color-bg: #1A1612;           /* Dark background */
   /* ... */
 }
 ```
 
 ### Fonts
 
-The site uses Google Fonts (Outfit + Playfair Display). To change fonts, update the `<link>` tags in `index.html` and the `--font-*` variables in CSS.
+The site uses Google Fonts:
+- **Cormorant Garamond** - Elegant serif for headings
+- **Montserrat** - Clean sans-serif for body text
 
 ## License
 
