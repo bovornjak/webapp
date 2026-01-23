@@ -1,23 +1,34 @@
-# Savory & Co. - Premium Catering Website
+# Twin Burger ทวินเบอร์เกอร์ - หมั่นโถวเบอร์เกอร์เจ้าแรก
 
-A beautiful, elegant catering business website built with React and Vite.
+A modern, bilingual (Thai/English) website for Twin Burger - a unique burger shop featuring Mom's original mantou recipe as burger buns.
+
+🌐 **Live Site**: [twin-burger.pages.dev](https://twin-burger.pages.dev)
 
 ## Features
 
 - ⚡ **Vite** - Lightning fast build tool
 - ⚛️ **React 18** - Modern React with hooks
 - 🧭 **React Router** - Client-side routing
-- 🎨 **Custom CSS** - Elegant design with CSS variables
-- 📱 **Responsive** - Mobile-first design
+- 🌍 **Bilingual** - Thai/English language support with toggle
+- 🎨 **Custom CSS** - Elegant green & peach color scheme
+- 📱 **Mobile Responsive** - Hamburger menu, touch-friendly
 - ✨ **Animations** - Smooth transitions and hover effects
-- ☁️ **Cloudflare Ready** - Wrangler CLI configured for deployment
+- 🎯 **SVG Icons** - Custom social media icons (LINE, Facebook, Instagram, TikTok)
+- ☁️ **Cloudflare Pages** - Fast global deployment
+
+## Services
+
+- 📦 **Snack Box** - Break time snacks from ฿80/box
+- 🍱 **Meal Box** - Boxed meals from ฿99/box
+- 🎪 **Catering** - Off-site catering services
+- 🎤 **Food Support** - Artist/film crew food support
 
 ## Pages
 
-- **Home** - Hero, services, featured menu, testimonials
-- **About** - Company story, team, values
-- **Menu** - Catering packages and pricing
-- **Contact** - Quote request form with event details
+- **Home** - Hero with logo, services overview, why choose us
+- **About** - Company story, stats, values
+- **Menu** - Service packages and pricing
+- **Contact** - Contact info, social links, service area
 
 ## Getting Started
 
@@ -63,12 +74,16 @@ npm run deploy
 ```
 webapp/
 ├── public/
-│   └── favicon.svg
+│   ├── favicon.svg
+│   └── logo.png
 ├── src/
 │   ├── components/
 │   │   ├── Header.jsx
 │   │   ├── Footer.jsx
-│   │   └── Layout.jsx
+│   │   ├── Layout.jsx
+│   │   └── SocialIcons.jsx
+│   ├── context/
+│   │   └── LanguageContext.jsx
 │   ├── pages/
 │   │   ├── Home.jsx
 │   │   ├── About.jsx
@@ -92,9 +107,10 @@ Edit the CSS variables in `src/styles/index.css`:
 
 ```css
 :root {
-  --color-primary: #C9A962;      /* Gold accent */
-  --color-warm: #A67C52;         /* Warm brown */
-  --color-bg: #1A1612;           /* Dark background */
+  --color-bg: #1B4332;           /* Dark green background */
+  --color-primary: #E8A598;      /* Peach/salmon accent */
+  --color-accent: #C9E4CA;       /* Light green */
+  --color-text: #FFFFFF;         /* White text */
   /* ... */
 }
 ```
@@ -102,8 +118,20 @@ Edit the CSS variables in `src/styles/index.css`:
 ### Fonts
 
 The site uses Google Fonts:
-- **Cormorant Garamond** - Elegant serif for headings
-- **Montserrat** - Clean sans-serif for body text
+- **Playfair Display** - Elegant serif for headings
+- **Kanit** - Thai-friendly sans-serif for body text
+
+### Languages
+
+Translations are managed in `src/context/LanguageContext.jsx`. Add or modify translations in the `translations` object.
+
+## Contact
+
+- 📞 094-466-6498
+- 💬 LINE: @twinburger
+- 📘 Facebook: [twinburger.bkk](https://facebook.com/twinburger.bkk)
+- 📸 Instagram: [@twinburger.bkk](https://instagram.com/twinburger.bkk)
+- 🎵 TikTok: [@twinburger.bkk](https://tiktok.com/@twinburger.bkk)
 
 ## License
 
