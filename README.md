@@ -128,7 +128,7 @@ Translations are managed in `src/context/LanguageContext.jsx`. Add or modify tra
 ## Contact
 
 - 📞 094-466-6498
-- 💬 LINE: @twinburger
+- 💬 LINE: [@twinburger](https://lin.ee/RtGeSs9)
 - 📘 Facebook: [twinburger.bkk](https://facebook.com/twinburger.bkk)
 - 📸 Instagram: [@twinburger.bkk](https://instagram.com/twinburger.bkk)
 - 🎵 TikTok: [@twinburger.bkk](https://tiktok.com/@twinburger.bkk)

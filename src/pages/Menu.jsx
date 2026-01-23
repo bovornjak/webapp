@@ -129,12 +129,12 @@ export default function Menu() {
               {t.menu.ctaSubtitle}
             </p>
             <p className="cta-contact" style={{ color: 'var(--color-text-muted)', marginBottom: 'var(--space-lg)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 'var(--space-md)', flexWrap: 'wrap' }}>
-              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+              <a href="tel:0944666498" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: 'inherit', textDecoration: 'none' }}>
                 <PhoneIcon /> 094-466-6498
-              </span>
-              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+              </a>
+              <a href="https://lin.ee/RtGeSs9" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: 'inherit', textDecoration: 'none' }}>
                 <LineIcon /> @twinburger
-              </span>
+              </a>
             </p>
             <Link to="/contact" className="btn btn-primary">
               {t.menu.ctaButton}

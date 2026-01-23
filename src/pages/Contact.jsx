@@ -43,7 +43,7 @@ export default function Contact() {
               <div className="contact-icon"><PhoneIcon /></div>
               <span className="contact-text">094-466-6498</span>
             </a>
-            <a href="https://linktr.ee/twinburger" target="_blank" rel="noopener noreferrer" className="contact-item">
+            <a href="https://lin.ee/RtGeSs9" target="_blank" rel="noopener noreferrer" className="contact-item">
               <div className="contact-icon"><LineIcon /></div>
               <span className="contact-text">LINE: @twinburger</span>
             </a>

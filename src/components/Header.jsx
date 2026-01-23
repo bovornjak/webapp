@@ -100,8 +100,8 @@ export default function Header() {
               <a href="tel:0944666498" className="nav-mobile-link">
                 <PhoneIcon /> <span>094-466-6498</span>
               </a>
-              <a href="https://linktr.ee/twinburger" target="_blank" rel="noopener noreferrer" className="nav-mobile-link">
-                <LineIcon /> <span>LINE: @twinburger</span>
+              <a href="https://lin.ee/RtGeSs9" target="_blank" rel="noopener noreferrer" className="nav-mobile-link">
+                <LineIcon /> <span>@twinburger</span>
               </a>
             </div>
           </nav>

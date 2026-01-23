@@ -43,7 +43,7 @@ export default function Footer() {
             <TikTokIcon />
           </a>
           <a 
-            href="https://linktr.ee/twinburger" 
+            href="https://lin.ee/RtGeSs9" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="footer-link footer-social"
