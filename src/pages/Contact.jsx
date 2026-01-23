@@ -1,4 +1,5 @@
 import { useLanguage } from '../context/LanguageContext'
+import { PhoneIcon, LineIcon, FacebookIcon, InstagramIcon, TikTokIcon, ClockIcon } from '../components/SocialIcons'
 
 export default function Contact() {
   const { t } = useLanguage()
@@ -39,27 +40,27 @@ export default function Contact() {
 
           <div className="contact-details" style={{ textAlign: 'left', maxWidth: '400px', margin: '0 auto' }}>
             <a href="tel:0944666498" className="contact-item">
-              <div className="contact-icon">📞</div>
+              <div className="contact-icon"><PhoneIcon /></div>
               <span className="contact-text">094-466-6498</span>
             </a>
             <a href="https://linktr.ee/twinburger" target="_blank" rel="noopener noreferrer" className="contact-item">
-              <div className="contact-icon">💬</div>
+              <div className="contact-icon"><LineIcon /></div>
               <span className="contact-text">LINE: @twinburger</span>
             </a>
             <a href="https://www.facebook.com/twinburger.bkk/" target="_blank" rel="noopener noreferrer" className="contact-item">
-              <div className="contact-icon">📘</div>
+              <div className="contact-icon"><FacebookIcon /></div>
               <span className="contact-text">Facebook: twinburger.bkk</span>
             </a>
             <a href="https://www.instagram.com/twinburger.bkk" target="_blank" rel="noopener noreferrer" className="contact-item">
-              <div className="contact-icon">📸</div>
+              <div className="contact-icon"><InstagramIcon /></div>
               <span className="contact-text">IG: @twinburger.bkk</span>
             </a>
             <a href="https://www.tiktok.com/@twinburger.bkk" target="_blank" rel="noopener noreferrer" className="contact-item">
-              <div className="contact-icon">🎵</div>
+              <div className="contact-icon"><TikTokIcon /></div>
               <span className="contact-text">TikTok: @twinburger.bkk</span>
             </a>
             <div className="contact-item">
-              <div className="contact-icon">🕐</div>
+              <div className="contact-icon"><ClockIcon /></div>
               <span className="contact-text">
                 {t.contact.hours}
               </span>

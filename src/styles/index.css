@@ -128,7 +128,7 @@ img {
 }
 
 .logo-image {
-  height: 55px;
+  height: 60px;
   width: auto;
 }
 
@@ -280,7 +280,37 @@ img {
 .hero-content {
   position: relative;
   z-index: 1;
-  max-width: 700px;
+  max-width: 900px;
+  width: 100%;
+}
+
+/* Hero Logo */
+.hero-logo {
+  margin-bottom: var(--space-lg);
+  width: 100%;
+}
+
+.hero-logo-image {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+}
+
+/* CTA Logo */
+.cta-logo {
+  max-width: 280px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto var(--space-lg);
+  display: block;
+  filter: drop-shadow(0 5px 20px rgba(0, 0, 0, 0.2));
+}
+
+.cta-contact svg {
+  width: 18px;
+  height: 18px;
+  color: var(--color-primary);
 }
 
 .hero-badge {
@@ -627,6 +657,10 @@ img {
   position: relative;
   overflow: hidden;
   border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-lg);
 }
 
 .about-image::before {
@@ -636,15 +670,15 @@ img {
   background: 
     linear-gradient(135deg, rgba(232, 165, 152, 0.15) 0%, transparent 50%),
     linear-gradient(225deg, rgba(201, 228, 202, 0.1) 0%, transparent 50%);
+  pointer-events: none;
 }
 
-.about-image::after {
-  content: '🍔';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 5rem;
+.about-logo-image {
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 5px 20px rgba(0, 0, 0, 0.2));
 }
 
 .about-content h1 {
@@ -763,6 +797,14 @@ img {
   justify-content: center;
   font-size: 1.15rem;
   flex-shrink: 0;
+  color: var(--color-primary);
+  transition: var(--transition-fast);
+}
+
+.contact-item:hover .contact-icon {
+  background: var(--color-primary);
+  color: var(--color-bg);
+  border-color: var(--color-primary);
 }
 
 .contact-text {
@@ -880,6 +922,17 @@ img {
 .footer-link:hover,
 .footer-link:active {
   color: var(--color-primary);
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-social svg {
+  width: 18px;
+  height: 18px;
 }
 
 /* Animations */
@@ -1022,6 +1075,15 @@ img {
     color: var(--color-text-muted);
     font-size: 0.95rem;
     padding: var(--space-sm) 0;
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+  }
+
+  .nav-mobile-link svg {
+    width: 18px;
+    height: 18px;
+    color: var(--color-primary);
   }
 
   .nav-lang-toggle {
@@ -1070,9 +1132,17 @@ img {
     padding: var(--space-lg) 0 var(--space-xl);
   }
 
+  .hero-logo-image {
+    max-width: 100%;
+  }
+
   .hero-badge {
     font-size: 0.75rem;
     padding: 6px var(--space-sm);
+  }
+
+  .cta-logo {
+    max-width: 200px;
   }
 
   .btn-group {

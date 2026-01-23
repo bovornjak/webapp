@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useLanguage } from '../context/LanguageContext'
+import { PhoneIcon, LineIcon } from '../components/SocialIcons'
 
 export default function Home() {
   const { t } = useLanguage()
@@ -17,15 +18,17 @@ export default function Home() {
       <section className="hero">
         <div className="container">
           <div className="hero-content">
-            <div className="hero-badge animate-fade-in">
+            {/* Hero Logo */}
+            <div className="hero-logo animate-fade-in">
+              <img 
+                src="/logo.png" 
+                alt="Twin Burger - หมั่นโถวเบอร์เกอร์ แป้งหมั่นโถวสูตรคุณแม่" 
+                className="hero-logo-image"
+              />
+            </div>
+            <div className="hero-badge animate-fade-in animate-delay-1">
               {t.home.badge}
             </div>
-            <h1 className="hero-title animate-fade-in animate-delay-1">
-              {t.home.title}
-            </h1>
-            <p className="hero-title-thai animate-fade-in animate-delay-1">
-              {t.home.subtitle}
-            </p>
             <p className="hero-description animate-fade-in animate-delay-2">
               {t.home.description}
             </p>
@@ -98,22 +101,31 @@ export default function Home() {
       <section className="section">
         <div className="container">
           <div 
-            className="card" 
+            className="card cta-card" 
             style={{ 
               textAlign: 'center', 
               padding: 'var(--space-2xl)',
               background: 'linear-gradient(135deg, var(--color-bg-card) 0%, var(--color-bg-elevated) 100%)'
             }}
           >
-            <p style={{ fontSize: '3rem', marginBottom: 'var(--space-md)' }} className="animate-float">🍔</p>
+            <img 
+              src="/logo.png" 
+              alt="Twin Burger" 
+              className="cta-logo animate-float"
+            />
             <h2 className="section-title" style={{ marginBottom: 'var(--space-sm)' }}>
               {t.home.ctaTitle}
             </h2>
             <p className="section-title-thai" style={{ marginBottom: 'var(--space-sm)' }}>
               {t.home.ctaSubtitle}
             </p>
-            <p style={{ color: 'var(--color-text-muted)', marginBottom: 'var(--space-lg)' }}>
-              📞 094-466-6498 | LINE: @twinburger
+            <p className="cta-contact" style={{ color: 'var(--color-text-muted)', marginBottom: 'var(--space-lg)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 'var(--space-md)', flexWrap: 'wrap' }}>
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+                <PhoneIcon /> 094-466-6498
+              </span>
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+                <LineIcon /> @twinburger
+              </span>
             </p>
             <Link to="/contact" className="btn btn-primary">
               {t.home.ctaButton}

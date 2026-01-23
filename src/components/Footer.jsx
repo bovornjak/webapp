@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useLanguage } from '../context/LanguageContext'
+import { FacebookIcon, InstagramIcon, TikTokIcon, LineIcon } from './SocialIcons'
 
 export default function Footer() {
   const { t } = useLanguage()
@@ -18,33 +19,37 @@ export default function Footer() {
             href="https://www.facebook.com/twinburger.bkk/" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="footer-link"
+            className="footer-link footer-social"
+            aria-label="Facebook"
           >
-            Facebook
+            <FacebookIcon />
           </a>
           <a 
             href="https://www.instagram.com/twinburger.bkk" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="footer-link"
+            className="footer-link footer-social"
+            aria-label="Instagram"
           >
-            Instagram
+            <InstagramIcon />
           </a>
           <a 
             href="https://www.tiktok.com/@twinburger.bkk" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="footer-link"
+            className="footer-link footer-social"
+            aria-label="TikTok"
           >
-            TikTok
+            <TikTokIcon />
           </a>
           <a 
             href="https://linktr.ee/twinburger" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="footer-link"
+            className="footer-link footer-social"
+            aria-label="LINE"
           >
-            LINE
+            <LineIcon />
           </a>
         </div>
       </div>

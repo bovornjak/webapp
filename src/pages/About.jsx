@@ -23,7 +23,13 @@ export default function About() {
       <section className="about-hero">
         <div className="container">
           <div className="about-grid">
-            <div className="about-image"></div>
+            <div className="about-image">
+              <img 
+                src="/logo.png" 
+                alt="Twin Burger Logo" 
+                className="about-logo-image"
+              />
+            </div>
             <div className="about-content">
               <h1>{t.about.title}</h1>
               <p className="title-thai">{t.about.subtitle}</p>

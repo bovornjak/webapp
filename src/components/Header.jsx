@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { useLanguage } from '../context/LanguageContext'
+import { PhoneIcon, LineIcon } from './SocialIcons'
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
@@ -97,10 +98,10 @@ export default function Header() {
             {/* Mobile Contact Info */}
             <div className="nav-mobile-contact">
               <a href="tel:0944666498" className="nav-mobile-link">
-                📞 094-466-6498
+                <PhoneIcon /> <span>094-466-6498</span>
               </a>
               <a href="https://linktr.ee/twinburger" target="_blank" rel="noopener noreferrer" className="nav-mobile-link">
-                💬 LINE: @twinburger
+                <LineIcon /> <span>LINE: @twinburger</span>
               </a>
             </div>
           </nav>
