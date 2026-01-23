@@ -1,18 +1,19 @@
 import { Link } from 'react-router-dom'
+import { useLanguage } from '../context/LanguageContext'
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear()
+  const { t } = useLanguage()
   
   return (
     <footer className="footer">
       <div className="container footer-inner">
         <p className="footer-text">
-          © {currentYear} Twin Burger | หมั่นโถวเบอร์เกอร์ แป้งหมั่นโถวสูตรคุณแม่
+          {t.footer.copyright}
         </p>
         <div className="footer-links">
-          <Link to="/about" className="footer-link">เกี่ยวกับเรา</Link>
-          <Link to="/menu" className="footer-link">เมนู</Link>
-          <Link to="/contact" className="footer-link">ติดต่อ</Link>
+          <Link to="/about" className="footer-link">{t.nav.about}</Link>
+          <Link to="/menu" className="footer-link">{t.nav.menu}</Link>
+          <Link to="/contact" className="footer-link">{t.nav.contact}</Link>
           <a 
             href="https://www.facebook.com/twinburger.bkk/" 
             target="_blank" 

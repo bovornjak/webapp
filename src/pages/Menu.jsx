@@ -1,64 +1,25 @@
 import { Link } from 'react-router-dom'
+import { useLanguage } from '../context/LanguageContext'
 
 export default function Menu() {
-  const packages = [
-    {
-      icon: '📦',
-      badge: 'ยอดนิยม',
-      title: 'Snack Box',
-      titleThai: 'สแน็คบ็อกซ์ และงานออกนอกสถานที่',
-      description: 'ชุดของว่างพร้อมทาน เหมาะสำหรับงานประชุม สัมมนา งานออกบูธ หรืองานเลี้ยงเล็กๆ',
-      price: 'เริ่มต้น 80 บาท',
-      items: ['อาหารคาว/หวาน/ผลไม้', 'เครื่องดื่ม', 'บรรจุภัณฑ์สวยงาม', 'ออกใบกำกับภาษีได้']
-    },
-    {
-      icon: '🍱',
-      badge: 'อิ่มคุ้ม',
-      title: 'Meal Box',
-      titleThai: 'ชุดข้าวกล่อง',
-      description: 'เซ็ตอาหารจัดเต็ม อิ่มอร่อยครบมื้อ มีให้เลือกหลากหลายเมนู ทั้งอาหารคาว หวาน และผลไม้',
-      price: 'เริ่มต้น 159 บาท/ชุด',
-      items: ['อาหารคาว หวาน ผลไม้', 'เครื่องดื่ม', 'ออกใบกำกับภาษี/บิลเงินสดได้', 'บรรจุภัณฑ์พรีเมียม']
-    },
-    {
-      icon: '🎪',
-      badge: 'งานใหญ่',
-      title: 'Catering',
-      titleThai: 'จัดเลี้ยงนอกสถานที่',
-      description: 'บริการจัดเลี้ยงนอกสถานที่ งานแต่งงาน งานเปิดตัว งานบริษัท พร้อมพนักงานมืออาชีพ',
-      price: 'ติดต่อสอบถาม',
-      items: ['เมนูตามต้องการ', 'พนักงานเสิร์ฟมืออาชีพ', 'อุปกรณ์จัดเลี้ยง', 'รองรับได้ถึง 1,000 กล่อง/วัน']
-    },
-    {
-      icon: '🎤',
-      badge: 'พิเศษ',
-      title: 'Food Support',
-      titleThai: 'ฟู้ดซัพพอร์ตศิลปิน',
-      description: 'สนับสนุนอาหารศิลปิน กองถ่าย คอนเสิร์ต แฟนมีตติ้ง พร้อมจัดเซ็ตถ่ายรูป',
-      price: 'ติดต่อสอบถาม',
-      items: ['เซ็ตอาหารตามงบ', 'ป้ายชื่อศิลปิน', 'จัดเซ็ตถ่ายรูป', 'ห่อของขวัญพิเศษ']
-    }
-  ]
+  const { t } = useLanguage()
 
-  const features = [
-    { icon: '✅', text: 'อร่อย สะอาด วัตถุดิบคุณภาพ' },
-    { icon: '✅', text: 'มีให้เลือกหลากหลายเมนู' },
-    { icon: '✅', text: 'ออกใบกำกับภาษี หรือ บิลเงินสดได้' },
-    { icon: '✅', text: 'จัดส่งตรงเวลา' },
-    { icon: '✅', text: 'สามารถทำได้สูงสุด 1,000 กล่องต่อวัน' },
-    { icon: '✅', text: 'พนักงานมืออาชีพ' },
-    { icon: '✅', text: 'มีความรับผิดชอบ ไม่ทิ้งงาน' },
+  const packages = [
+    { icon: '📦', badge: t.menu.badges.popular, title: 'Snack Box', ...t.menu.packages.snackBox },
+    { icon: '🍱', badge: t.menu.badges.value, title: 'Meal Box', ...t.menu.packages.mealBox },
+    { icon: '🎪', badge: t.menu.badges.large, title: 'Catering', ...t.menu.packages.catering },
+    { icon: '🎤', badge: t.menu.badges.special, title: 'Food Support', ...t.menu.packages.foodSupport },
   ]
 
   const menuItems = [
-    { icon: '🍔', name: 'หมั่นโถวเบอร์เกอร์หมู', price: '59' },
-    { icon: '🍔', name: 'หมั่นโถวเบอร์เกอร์ไก่', price: '59' },
-    { icon: '🍔', name: 'หมั่นโถวเบอร์เกอร์เนื้อ', price: '79' },
-    { icon: '🍔', name: 'หมั่นโถวดับเบิ้ลชีส', price: '89' },
-    { icon: '🍟', name: 'เฟรนช์ฟรายส์', price: '39' },
-    { icon: '🧀', name: 'เฟรนช์ฟรายส์ชีส', price: '49' },
-    { icon: '🥤', name: 'ชาไทยเย็น', price: '35' },
-    { icon: '🥛', name: 'นมสดเย็น', price: '35' }
+    { icon: '🍔', name: 'หมั่นโถวเบอร์เกอร์หมู / Pork Burger', price: '59' },
+    { icon: '🍔', name: 'หมั่นโถวเบอร์เกอร์ไก่ / Chicken Burger', price: '59' },
+    { icon: '🍔', name: 'หมั่นโถวเบอร์เกอร์เนื้อ / Beef Burger', price: '79' },
+    { icon: '🍔', name: 'หมั่นโถวดับเบิ้ลชีส / Double Cheese', price: '89' },
+    { icon: '🍟', name: 'เฟรนช์ฟรายส์ / French Fries', price: '39' },
+    { icon: '🧀', name: 'เฟรนช์ฟรายส์ชีส / Cheese Fries', price: '49' },
+    { icon: '🥤', name: 'ชาไทยเย็น / Thai Iced Tea', price: '35' },
+    { icon: '🥛', name: 'นมสดเย็น / Iced Fresh Milk', price: '35' }
   ]
 
   return (
@@ -67,14 +28,12 @@ export default function Menu() {
       <section className="section">
         <div className="container">
           <div className="section-header" style={{ marginBottom: 'var(--space-lg)' }}>
-            <p className="section-eyebrow">เมนูของเรา</p>
+            <p className="section-eyebrow">{t.menu.eyebrow}</p>
             <h1 className="section-title" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)' }}>
-              Our Menu
+              {t.menu.title}
             </h1>
-            <p className="section-title-thai">เมนูและแพ็คเกจ</p>
-            <p className="section-description">
-              เลือกแพ็คเกจที่เหมาะกับงานของคุณ หรือสั่งเมนูเดี่ยวก็ได้!
-            </p>
+            <p className="section-title-thai">{t.menu.subtitle}</p>
+            <p className="section-description">{t.menu.description}</p>
           </div>
 
           {/* Packages Grid */}
@@ -87,8 +46,8 @@ export default function Menu() {
                 <div className="menu-content">
                   <span className="menu-badge">{pkg.badge}</span>
                   <h3 className="menu-title">{pkg.title}</h3>
-                  <p className="menu-title-thai">{pkg.titleThai}</p>
-                  <p className="menu-description">{pkg.description}</p>
+                  <p className="menu-title-thai">{pkg.subtitle}</p>
+                  <p className="menu-description">{pkg.desc}</p>
                   <ul style={{ 
                     listStyle: 'none', 
                     marginBottom: 'var(--space-md)',
@@ -121,9 +80,9 @@ export default function Menu() {
       <section className="section">
         <div className="container">
           <div className="section-header">
-            <p className="section-eyebrow">ทำไมต้องเลือกเรา</p>
-            <h2 className="section-title">Why Twin Burger?</h2>
-            <p className="section-title-thai">ทำไมต้องเลือก Twin Burger</p>
+            <p className="section-eyebrow">{t.menu.whyEyebrow}</p>
+            <h2 className="section-title">{t.menu.whyTitle}</h2>
+            <p className="section-title-thai">{t.menu.whySubtitle}</p>
           </div>
           <div 
             className="card" 
@@ -134,7 +93,7 @@ export default function Menu() {
             }}
           >
             <div style={{ display: 'grid', gap: 'var(--space-sm)' }}>
-              {features.map((feature, index) => (
+              {t.features.map((feature, index) => (
                 <div 
                   key={index} 
                   style={{ 
@@ -142,11 +101,11 @@ export default function Menu() {
                     alignItems: 'center', 
                     gap: 'var(--space-md)',
                     padding: 'var(--space-sm) 0',
-                    borderBottom: index < features.length - 1 ? '1px solid var(--color-border)' : 'none'
+                    borderBottom: index < t.features.length - 1 ? '1px solid var(--color-border)' : 'none'
                   }}
                 >
-                  <span style={{ fontSize: '1.25rem', color: 'var(--color-accent)' }}>{feature.icon}</span>
-                  <span style={{ color: 'var(--color-text)', fontSize: '1rem' }}>{feature.text}</span>
+                  <span style={{ fontSize: '1.25rem', color: 'var(--color-accent)' }}>✅</span>
+                  <span style={{ color: 'var(--color-text)', fontSize: '1rem' }}>{feature}</span>
                 </div>
               ))}
             </div>
@@ -158,9 +117,9 @@ export default function Menu() {
       <section className="section">
         <div className="container">
           <div className="section-header">
-            <p className="section-eyebrow">เมนูเดี่ยว</p>
-            <h2 className="section-title">À La Carte</h2>
-            <p className="section-title-thai">สั่งเมนูเดี่ยว</p>
+            <p className="section-eyebrow">{t.menu.alacarteEyebrow}</p>
+            <h2 className="section-title">{t.menu.alacarteTitle}</h2>
+            <p className="section-title-thai">{t.menu.alacarteSubtitle}</p>
           </div>
           <div className="cards-grid" style={{ maxWidth: '900px', margin: '0 auto' }}>
             {menuItems.map((item, index) => (
@@ -176,7 +135,7 @@ export default function Menu() {
               >
                 <span style={{ fontSize: '1.75rem' }}>{item.icon}</span>
                 <div style={{ flex: 1 }}>
-                  <h3 style={{ fontSize: '0.95rem', marginBottom: '0' }}>
+                  <h3 style={{ fontSize: '0.9rem', marginBottom: '0' }}>
                     {item.name}
                   </h3>
                 </div>
@@ -201,14 +160,12 @@ export default function Menu() {
           >
             <p style={{ fontSize: '2rem', marginBottom: 'var(--space-md)' }}>📝</p>
             <h3 style={{ marginBottom: 'var(--space-md)', color: 'var(--color-primary)', fontFamily: 'var(--font-display)', fontStyle: 'italic' }}>
-              หมายเหตุ
+              {t.menu.noteTitle}
             </h3>
             <p className="card-description">
-              • ราคาอาจมีการเปลี่ยนแปลงตามวัตถุดิบ<br />
-              • สั่งขั้นต่ำ 30 กล่องสำหรับ Snack Box / Meal Box<br />
-              • กรุณาสั่งล่วงหน้าอย่างน้อย 3 วัน<br />
-              • สอบถามเมนูพิเศษหรือปรับเปลี่ยนได้<br />
-              • ออกใบกำกับภาษี หรือ บิลเงินสดได้
+              {t.menu.notes.map((note, i) => (
+                <span key={i}>• {note}<br /></span>
+              ))}
             </p>
           </div>
         </div>
@@ -227,16 +184,16 @@ export default function Menu() {
           >
             <p style={{ fontSize: '2.5rem', marginBottom: 'var(--space-md)' }}>🍔</p>
             <h2 className="section-title" style={{ marginBottom: 'var(--space-sm)' }}>
-              Order Now
+              {t.menu.ctaTitle}
             </h2>
             <p className="section-title-thai" style={{ marginBottom: 'var(--space-sm)' }}>
-              สั่งเลยวันนี้!
+              {t.menu.ctaSubtitle}
             </p>
             <p style={{ color: 'var(--color-text-muted)', marginBottom: 'var(--space-lg)' }}>
               📞 094-466-6498 | LINE: @twinburger
             </p>
             <Link to="/contact" className="btn btn-primary">
-              ติดต่อสั่งซื้อ
+              {t.menu.ctaButton}
             </Link>
           </div>
         </div>

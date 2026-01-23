@@ -1,4 +1,8 @@
+import { useLanguage } from '../context/LanguageContext'
+
 export default function Contact() {
+  const { t } = useLanguage()
+
   return (
     <section className="section">
       <div className="container">
@@ -12,7 +16,7 @@ export default function Contact() {
             color: 'var(--color-primary)',
             fontStyle: 'italic'
           }}>
-            Order Now
+            {t.contact.title}
           </h1>
           <p style={{
             fontSize: '1.1rem',
@@ -21,7 +25,7 @@ export default function Contact() {
             fontWeight: 400,
             opacity: 0.9
           }}>
-            สั่งซื้อเลย!
+            {t.contact.subtitle}
           </p>
           <p style={{
             color: 'var(--color-text-muted)',
@@ -30,8 +34,7 @@ export default function Contact() {
             fontWeight: 300,
             lineHeight: 1.8
           }}>
-            พร้อมให้บริการ Snack Box, Meal Box, Catering และ Food Support 
-            ติดต่อสอบถามได้เลยค่ะ ยินดีให้บริการ!
+            {t.contact.description}
           </p>
 
           <div className="contact-details" style={{ textAlign: 'left', maxWidth: '400px', margin: '0 auto' }}>
@@ -58,7 +61,7 @@ export default function Contact() {
             <div className="contact-item">
               <div className="contact-icon">🕐</div>
               <span className="contact-text">
-                เปิดรับออเดอร์ทุกวัน 09:00 - 20:00 น.
+                {t.contact.hours}
               </span>
             </div>
           </div>
@@ -80,11 +83,11 @@ export default function Contact() {
                 fontWeight: '500',
                 marginBottom: 'var(--space-sm)'
               }}>
-                📍 พื้นที่ให้บริการ
+                📍 {t.contact.serviceArea}
               </p>
               <p style={{ color: 'var(--color-text-muted)', fontSize: '0.9rem' }}>
-                กรุงเทพฯ และปริมณฑล<br />
-                (ค่าส่งคิดตามระยะทาง)
+                {t.contact.serviceAreaDesc}<br />
+                {t.contact.serviceAreaNote}
               </p>
             </div>
 
@@ -99,11 +102,11 @@ export default function Contact() {
                 fontWeight: '500',
                 marginBottom: 'var(--space-sm)'
               }}>
-                📦 กำลังการผลิต
+                📦 {t.contact.capacity}
               </p>
               <p style={{ color: 'var(--color-text-muted)', fontSize: '0.9rem' }}>
-                สามารถทำได้สูงสุด<br />
-                <strong style={{ color: 'var(--color-text)' }}>1,000 กล่องต่อวัน</strong>
+                {t.contact.capacityDesc}<br />
+                <strong style={{ color: 'var(--color-text)' }}>{t.contact.capacityAmount}</strong>
               </p>
             </div>
           </div>

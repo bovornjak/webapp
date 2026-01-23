@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react'
 import { Link, NavLink } from 'react-router-dom'
+import { useLanguage } from '../context/LanguageContext'
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const { language, toggleLanguage, t } = useLanguage()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,10 +15,8 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // Close menu when clicking outside or on a link
   const closeMenu = () => setMenuOpen(false)
 
-  // Prevent body scroll when menu is open
   useEffect(() => {
     if (menuOpen) {
       document.body.style.overflow = 'hidden'
@@ -34,11 +34,11 @@ export default function Header() {
         <Link to="/" className="logo" onClick={closeMenu}>
           <img 
             src="/logo.png" 
-            alt="Twin Burger - หมั่นโถวเบอร์เกอร์ แป้งหมั่นโถวสูตรคุณแม่" 
+            alt="Twin Burger" 
             className="logo-image"
           />
         </Link>
-        
+
         {/* Mobile Menu Button */}
         <button 
           className={`menu-toggle ${menuOpen ? 'active' : ''}`}
@@ -50,48 +50,70 @@ export default function Header() {
           <span className="menu-toggle-bar"></span>
         </button>
 
-        {/* Navigation */}
-        <nav className={`nav ${menuOpen ? 'nav-open' : ''}`}>
-          <NavLink 
-            to="/" 
-            className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
-            end
-            onClick={closeMenu}
+        {/* Navigation & Language Toggle Container */}
+        <div className="nav-container">
+          <nav className={`nav ${menuOpen ? 'nav-open' : ''}`}>
+            <NavLink 
+              to="/" 
+              className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+              end
+              onClick={closeMenu}
+            >
+              {t.nav.home}
+            </NavLink>
+            <NavLink 
+              to="/about" 
+              className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+              onClick={closeMenu}
+            >
+              {t.nav.about}
+            </NavLink>
+            <NavLink 
+              to="/menu" 
+              className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+              onClick={closeMenu}
+            >
+              {t.nav.menu}
+            </NavLink>
+            <NavLink 
+              to="/contact" 
+              className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+              onClick={closeMenu}
+            >
+              {t.nav.contact}
+            </NavLink>
+            
+            {/* Mobile Language Toggle */}
+            <button 
+              className="nav-lang-toggle"
+              onClick={() => {
+                toggleLanguage()
+                closeMenu()
+              }}
+            >
+              {language === 'th' ? '🇬🇧 English' : '🇹🇭 ภาษาไทย'}
+            </button>
+            
+            {/* Mobile Contact Info */}
+            <div className="nav-mobile-contact">
+              <a href="tel:0944666498" className="nav-mobile-link">
+                📞 094-466-6498
+              </a>
+              <a href="https://linktr.ee/twinburger" target="_blank" rel="noopener noreferrer" className="nav-mobile-link">
+                💬 LINE: @twinburger
+              </a>
+            </div>
+          </nav>
+
+          {/* Desktop Language Toggle */}
+          <button 
+            className="lang-toggle"
+            onClick={toggleLanguage}
+            aria-label="Toggle language"
           >
-            หน้าแรก
-          </NavLink>
-          <NavLink 
-            to="/about" 
-            className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
-            onClick={closeMenu}
-          >
-            เกี่ยวกับเรา
-          </NavLink>
-          <NavLink 
-            to="/menu" 
-            className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
-            onClick={closeMenu}
-          >
-            เมนู
-          </NavLink>
-          <NavLink 
-            to="/contact" 
-            className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
-            onClick={closeMenu}
-          >
-            ติดต่อสั่งซื้อ
-          </NavLink>
-          
-          {/* Mobile Contact Info */}
-          <div className="nav-mobile-contact">
-            <a href="tel:0944666498" className="nav-mobile-link">
-              📞 094-466-6498
-            </a>
-            <a href="https://linktr.ee/twinburger" target="_blank" rel="noopener noreferrer" className="nav-mobile-link">
-              💬 LINE: @twinburger
-            </a>
-          </div>
-        </nav>
+            {language === 'th' ? 'EN' : 'TH'}
+          </button>
+        </div>
 
         {/* Overlay */}
         {menuOpen && <div className="nav-overlay" onClick={closeMenu}></div>}
