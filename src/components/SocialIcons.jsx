@@ -35,3 +35,10 @@ export const ClockIcon = () => (
     <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.2 3.2.8-1.3-4.5-2.7V7z"/>
   </svg>
 )
+
+export const CheckIcon = () => (
+  <svg viewBox="0 0 24 24" width="28" height="28">
+    <rect x="2" y="2" width="20" height="20" rx="4" fill="#22C55E"/>
+    <path d="M9 12l2.5 2.5L16 9" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+  </svg>
+)

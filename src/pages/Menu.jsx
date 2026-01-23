@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useLanguage } from '../context/LanguageContext'
+import { CheckIcon, PhoneIcon, LineIcon } from '../components/SocialIcons'
 
 export default function Menu() {
   const { t } = useLanguage()
@@ -9,17 +10,6 @@ export default function Menu() {
     { icon: '🍱', badge: t.menu.badges.value, title: 'Meal Box', ...t.menu.packages.mealBox },
     { icon: '🎪', badge: t.menu.badges.large, title: 'Catering', ...t.menu.packages.catering },
     { icon: '🎤', badge: t.menu.badges.special, title: 'Food Support', ...t.menu.packages.foodSupport },
-  ]
-
-  const menuItems = [
-    { icon: '🍔', name: 'หมั่นโถวเบอร์เกอร์หมู / Pork Burger', price: '59' },
-    { icon: '🍔', name: 'หมั่นโถวเบอร์เกอร์ไก่ / Chicken Burger', price: '59' },
-    { icon: '🍔', name: 'หมั่นโถวเบอร์เกอร์เนื้อ / Beef Burger', price: '79' },
-    { icon: '🍔', name: 'หมั่นโถวดับเบิ้ลชีส / Double Cheese', price: '89' },
-    { icon: '🍟', name: 'เฟรนช์ฟรายส์ / French Fries', price: '39' },
-    { icon: '🧀', name: 'เฟรนช์ฟรายส์ชีส / Cheese Fries', price: '49' },
-    { icon: '🥤', name: 'ชาไทยเย็น / Thai Iced Tea', price: '35' },
-    { icon: '🥛', name: 'นมสดเย็น / Iced Fresh Milk', price: '35' }
   ]
 
   return (
@@ -84,62 +74,11 @@ export default function Menu() {
             <h2 className="section-title">{t.menu.whyTitle}</h2>
             <p className="section-title-thai">{t.menu.whySubtitle}</p>
           </div>
-          <div 
-            className="card" 
-            style={{ 
-              maxWidth: '700px', 
-              margin: '0 auto',
-              padding: 'var(--space-xl)'
-            }}
-          >
-            <div style={{ display: 'grid', gap: 'var(--space-sm)' }}>
-              {t.features.map((feature, index) => (
-                <div 
-                  key={index} 
-                  style={{ 
-                    display: 'flex', 
-                    alignItems: 'center', 
-                    gap: 'var(--space-md)',
-                    padding: 'var(--space-sm) 0',
-                    borderBottom: index < t.features.length - 1 ? '1px solid var(--color-border)' : 'none'
-                  }}
-                >
-                  <span style={{ fontSize: '1.25rem', color: 'var(--color-accent)' }}>✅</span>
-                  <span style={{ color: 'var(--color-text)', fontSize: '1rem' }}>{feature}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Individual Menu Items */}
-      <section className="section">
-        <div className="container">
-          <div className="section-header">
-            <p className="section-eyebrow">{t.menu.alacarteEyebrow}</p>
-            <h2 className="section-title">{t.menu.alacarteTitle}</h2>
-            <p className="section-title-thai">{t.menu.alacarteSubtitle}</p>
-          </div>
-          <div className="cards-grid" style={{ maxWidth: '900px', margin: '0 auto' }}>
-            {menuItems.map((item, index) => (
-              <div 
-                key={index} 
-                className="card"
-                style={{ 
-                  display: 'flex', 
-                  alignItems: 'center',
-                  gap: 'var(--space-md)',
-                  padding: 'var(--space-md) var(--space-lg)'
-                }}
-              >
-                <span style={{ fontSize: '1.75rem' }}>{item.icon}</span>
-                <div style={{ flex: 1 }}>
-                  <h3 style={{ fontSize: '0.9rem', marginBottom: '0' }}>
-                    {item.name}
-                  </h3>
-                </div>
-                <p className="menu-price" style={{ marginBottom: 0 }}>{item.price} ฿</p>
+          <div className="features-grid">
+            {t.features.map((feature, index) => (
+              <div key={index} className="feature-card">
+                <CheckIcon />
+                <span className="feature-text">{feature}</span>
               </div>
             ))}
           </div>
@@ -189,8 +128,13 @@ export default function Menu() {
             <p className="section-title-thai" style={{ marginBottom: 'var(--space-sm)' }}>
               {t.menu.ctaSubtitle}
             </p>
-            <p style={{ color: 'var(--color-text-muted)', marginBottom: 'var(--space-lg)' }}>
-              📞 094-466-6498 | LINE: @twinburger
+            <p className="cta-contact" style={{ color: 'var(--color-text-muted)', marginBottom: 'var(--space-lg)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 'var(--space-md)', flexWrap: 'wrap' }}>
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+                <PhoneIcon /> 094-466-6498
+              </span>
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+                <LineIcon /> @twinburger
+              </span>
             </p>
             <Link to="/contact" className="btn btn-primary">
               {t.menu.ctaButton}

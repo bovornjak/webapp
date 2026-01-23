@@ -34,15 +34,15 @@ export const translations = {
     services: {
       snackBox: {
         title: 'Snack Box',
-        titleThai: 'สแน็คบ็อกซ์',
-        price: 'เริ่มต้น 80 บาท',
-        description: 'ชุดของว่างพร้อมทาน เหมาะสำหรับงานประชุม สัมมนา งานออกบูธ หรืองานเลี้ยงเล็กๆ',
+        titleThai: 'ชุดอาหารว่าง จัดเบรค',
+        price: 'เริ่มต้น 80 บาท/กล่อง',
+        description: 'ชุดอาหารว่างสำหรับจัดเบรคประชุม สัมมนา งานโรงเรียน งานแต่ง งานวันเกิด หรือกิจกรรมต่างๆ ประกอบด้วยหมั่นโถวเบอร์เกอร์และเครื่องดื่ม (ชา กาแฟ น้ำสมุนไพร)',
       },
       mealBox: {
         title: 'Meal Box',
-        titleThai: 'ชุดข้าวกล่อง',
-        price: 'เริ่มต้น 159 บาท',
-        description: 'เซ็ตอาหารจัดเต็ม อิ่มอร่อยครบทุกมื้อ มีให้เลือกหลากหลายเมนู',
+        titleThai: 'ข้าวกล่อง',
+        price: 'เริ่มต้น 99 บาท/กล่อง',
+        description: 'ข้าวกล่องสำหรับแจกในงานประชุม สัมมนา งานบุญ งานเลี้ยง หรือกิจกรรมต่างๆ ประกอบด้วยอาหารจานเดียวหรือกับข้าว เราตั้งใจเลือกวัตถุดิบอย่างดี สด สะอาด รสชาติกลมกล่อม พร้อมเครื่องดื่มทั้งชา กาแฟ และน้ำสมุนไพร',
       },
       catering: {
         title: 'Catering',
@@ -124,16 +124,16 @@ export const translations = {
       },
       packages: {
         snackBox: {
-          subtitle: 'สแน็คบ็อกซ์ และงานออกนอกสถานที่',
-          desc: 'ชุดของว่างพร้อมทาน เหมาะสำหรับงานประชุม สัมมนา งานออกบูธ หรืองานเลี้ยงเล็กๆ',
-          price: 'เริ่มต้น 80 บาท',
-          items: ['อาหารคาว/หวาน/ผลไม้', 'เครื่องดื่ม', 'บรรจุภัณฑ์สวยงาม', 'ออกใบกำกับภาษีได้'],
+          subtitle: 'ชุดอาหารว่าง จัดเบรค',
+          desc: 'ชุดอาหารว่างสำหรับจัดเบรคประชุม สัมมนา งานโรงเรียน งานแต่ง งานวันเกิด หรือกิจกรรมต่างๆ',
+          price: 'เริ่มต้น 80 บาท/กล่อง',
+          items: ['หมั่นโถวเบอร์เกอร์', 'เครื่องดื่ม (ชา/กาแฟ/น้ำสมุนไพร)', 'บรรจุภัณฑ์สวยงาม', 'ออกใบกำกับภาษีได้'],
         },
         mealBox: {
-          subtitle: 'ชุดข้าวกล่อง',
-          desc: 'เซ็ตอาหารจัดเต็ม อิ่มอร่อยครบมื้อ มีให้เลือกหลากหลายเมนู ทั้งอาหารคาว หวาน และผลไม้',
-          price: 'เริ่มต้น 159 บาท/ชุด',
-          items: ['อาหารคาว หวาน ผลไม้', 'เครื่องดื่ม', 'ออกใบกำกับภาษี/บิลเงินสดได้', 'บรรจุภัณฑ์พรีเมียม'],
+          subtitle: 'ข้าวกล่อง',
+          desc: 'ข้าวกล่องสำหรับแจกในงานประชุม สัมมนา งานบุญ งานเลี้ยง หรือกิจกรรมต่างๆ วัตถุดิบคุณภาพ สด สะอาด รสชาติกลมกล่อม',
+          price: 'เริ่มต้น 99 บาท/กล่อง',
+          items: ['อาหารจานเดียว/กับข้าว', 'เครื่องดื่ม (ชา/กาแฟ/น้ำสมุนไพร)', 'ออกใบกำกับภาษี/บิลเงินสดได้', 'บรรจุภัณฑ์พรีเมียม'],
         },
         catering: {
           subtitle: 'จัดเลี้ยงนอกสถานที่',
@@ -198,15 +198,15 @@ export const translations = {
     services: {
       snackBox: {
         title: 'Snack Box',
-        titleThai: 'Snack Box',
-        price: 'From ฿80',
-        description: 'Ready-to-eat snack sets, perfect for meetings, seminars, booths, or small parties.',
+        titleThai: 'Break Time Snacks',
+        price: 'From ฿80/box',
+        description: 'Snack sets for meeting breaks, seminars, school events, weddings, birthdays or any activities. Includes mantou burger and beverages (tea, coffee, herbal drinks).',
       },
       mealBox: {
         title: 'Meal Box',
-        titleThai: 'Meal Box',
-        price: 'From ฿159',
-        description: 'Complete meal sets with variety of menu options for every taste.',
+        titleThai: 'Boxed Meals',
+        price: 'From ฿99/box',
+        description: 'Boxed meals for meetings, seminars, merit-making events, parties or any activities. Quality ingredients, fresh, clean, delicious taste with beverages included.',
       },
       catering: {
         title: 'Catering',
@@ -288,16 +288,16 @@ export const translations = {
       },
       packages: {
         snackBox: {
-          subtitle: 'Snack Box & Outside Events',
-          desc: 'Ready-to-eat snack sets, perfect for meetings, seminars, booths, or small parties.',
-          price: 'From ฿80',
-          items: ['Savory/Sweet/Fruits', 'Beverages', 'Beautiful packaging', 'Tax invoice available'],
+          subtitle: 'Break Time Snacks',
+          desc: 'Snack sets for meeting breaks, seminars, school events, weddings, birthdays or any activities.',
+          price: 'From ฿80/box',
+          items: ['Mantou Burger', 'Beverages (Tea/Coffee/Herbal)', 'Beautiful packaging', 'Tax invoice available'],
         },
         mealBox: {
-          subtitle: 'Meal Box Set',
-          desc: 'Complete meal sets with variety of savory dishes, desserts, and fruits.',
-          price: 'From ฿159/set',
-          items: ['Savory, dessert, fruits', 'Beverages', 'Tax invoice/receipt available', 'Premium packaging'],
+          subtitle: 'Boxed Meals',
+          desc: 'Boxed meals for meetings, seminars, merit-making events, parties or any activities. Quality ingredients, fresh & delicious.',
+          price: 'From ฿99/box',
+          items: ['Single dish / Rice with sides', 'Beverages (Tea/Coffee/Herbal)', 'Tax invoice/receipt available', 'Premium packaging'],
         },
         catering: {
           subtitle: 'Off-site Catering',

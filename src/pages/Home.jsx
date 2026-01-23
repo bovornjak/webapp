@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useLanguage } from '../context/LanguageContext'
-import { PhoneIcon, LineIcon } from '../components/SocialIcons'
+import { PhoneIcon, LineIcon, CheckIcon } from '../components/SocialIcons'
 
 export default function Home() {
   const { t } = useLanguage()
@@ -77,20 +77,11 @@ export default function Home() {
             <h2 className="section-title">{t.home.whyUsTitle}</h2>
             <p className="section-title-thai">{t.home.whyUsSubtitle}</p>
           </div>
-          <div className="cards-grid" style={{ maxWidth: '800px', margin: '0 auto' }}>
+          <div className="features-grid">
             {t.features.map((feature, index) => (
-              <div 
-                key={index} 
-                className="card"
-                style={{ 
-                  display: 'flex', 
-                  alignItems: 'center',
-                  gap: 'var(--space-md)',
-                  padding: 'var(--space-md) var(--space-lg)'
-                }}
-              >
-                <span style={{ fontSize: '1.5rem', color: 'var(--color-accent)' }}>✅</span>
-                <span style={{ color: 'var(--color-text)', fontSize: '1rem' }}>{feature}</span>
+              <div key={index} className="feature-card">
+                <CheckIcon />
+                <span className="feature-text">{feature}</span>
               </div>
             ))}
           </div>
