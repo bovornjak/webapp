@@ -147,6 +147,7 @@ img {
   padding: 10px;
   z-index: 101;
   cursor: pointer;
+  margin-left: auto;
 }
 
 .menu-toggle-bar {
@@ -966,9 +967,15 @@ img {
     display: flex;
   }
 
-  /* Mobile Navigation Container */
+  /* Mobile Header Layout */
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* Mobile Navigation Container - contains fixed nav, so no layout impact */
   .nav-container {
-    position: static;
+    position: absolute;
   }
 
   /* Mobile Navigation */
